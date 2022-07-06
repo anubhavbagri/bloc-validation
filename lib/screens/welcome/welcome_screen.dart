@@ -20,7 +20,7 @@ class WelcomeScreen extends StatelessWidget {
                 MaterialPageRoute(
                   builder: (context) => BlocProvider(
                     create: (context) => SignInBloc(),
-                    child: const SignInScreen(),
+                    child: SignInScreen(),
                   ),
                 ),
               );
