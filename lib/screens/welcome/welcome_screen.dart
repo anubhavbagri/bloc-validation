@@ -1,3 +1,4 @@
+import 'package:bloc_validation/screens/sign_in/bloc/sign_in_bloc.dart';
 import 'package:bloc_validation/screens/sign_in/sign_in_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,10 @@ class WelcomeScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SignInScreen(),
+                  builder: (context) => BlocProvider(
+                    create: (context) => SignInBloc(),
+                    child: const SignInScreen(),
+                  ),
                 ),
               );
             },
